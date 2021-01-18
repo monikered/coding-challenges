@@ -2,7 +2,20 @@
 # coding: utf-8
 
 # ## Movie Festival Problem (from CSES)
+
+# In[14]:
+
+
 # from https://cses.fi/problemset/task/1629/
+# input n is number of movies
+# maximize n given start and end times for each movie
+
+import numpy as np
+
+def main:
+    movies = [int(x) for x in input().split()] 
+    times = np.reshape(movies[1:], (-1, 2))
+    scheduler(times)
 
 def scheduler(times):
     can_watch = 0
@@ -11,14 +24,11 @@ def scheduler(times):
             can_watch += 1
             break
         else:
-            x = np.amin(times[:,1]) # threshold has earliest end time
+            x = np.amin(times[:,1])
             can_watch += 1
             times = times[~np.any(times < x, axis=1), :]
     return can_watch
 
+if __name__ == '__main__':
+    main()
 
-if __name__ == "__main__":
-    import numpy as np
-    movies = [int(x) for x in input().split()]
-    times = np.reshape(movies[1:], (-1, 2))
-    scheduler(times)

@@ -12,7 +12,7 @@
 
 import numpy as np
 
-def main:
+def main():
     movies = [int(x) for x in input().split()] 
     times = np.reshape(movies[1:], (-1, 2))
     scheduler(times)
@@ -20,15 +20,16 @@ def main:
 def scheduler(times):
     can_watch = 0
     while times.size > 0:
-        if times.shape[0] == 1:
+        if times.shape[0] == 1: # number of movies in list
             can_watch += 1
             break
         else:
-            x = np.amin(times[:,1])
+            x = np.amin(times[:,1]) # find movie that ends earliest
             can_watch += 1
-            times = times[~np.any(times < x, axis=1), :]
+            times = times[~np.any(times < x, axis=1), :] # remove it and its intersections from list
     return can_watch
 
 if __name__ == '__main__':
     main()
+    print(can_watch)
 

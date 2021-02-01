@@ -11,6 +11,7 @@ Problem Description | Type of Problem | My Solution
 Problem Description | My Solution
 ------------------- | -----------
 [Disemvowel Trolls](https://www.codewars.com/kata/52fba66badcd10859f00097e) | [here](https://github.com/monikered/coding-challenges/blob/main/CodeWars/disemvowel-trolls.py)
+[Find the stray number](https://www.codewars.com/kata/57f609022f4d534f05000024/solutions/python/me/best_practice) | [here](https://github.com/monikered/coding-challenges/blob/main/CodeWars/find-the-stray-number.py)
 
 ### 8 kyu
 Problem Description | My Solution
